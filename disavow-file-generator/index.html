@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disavow File Generator - URL to Root Domain Extractor</title>
+    <meta name="description"
+        content="Disavow File Generator is a simple online tool to extract Root domains from URLs as it is one of the methods to remove spammy b other domain name and download it with a click." />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <meta property="og:description"
+        content="Disavow File Generator is a simple online tool to extract Root domains from URLs as it is one of the methods to remove spammy b other domain name and download it with a click." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Disavow File Generator - URL to Root Domain Extractor - Suraj Katwal" />
+    <meta property="og:url" content="https://surajkatwal.com.np/disavow-file-generator/" />
+    <meta property="og:site_name" content="Suraj Katwal" />
+    <meta property="og:updated_time" content="2022-01-01T10:10:24+05:45" />
+    <meta property="og:image"
+        content="https://surajkatwal.com.np/image/disavow-file-generator-url-to-root-domain-extractor.jpg" />
+    <meta property="og:image:secure_url"
+        content="https://surajkatwal.com.np/image/disavow-file-generator-url-to-root-domain-extractor.jpg" />
+    <meta property="og:image:width" content="720" />
+    <meta property="og:image:height" content="450" />
+    <meta property="og:image:alt" content="Disavow File Generator - URL to Root Domain Extractor" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Disavow File Generator - URL to Root Domain Extractor - Suraj Katwal" />
+    <meta name="twitter:description"
+        content="Disavow File Generator is a simple online tool to extract Root domains from URLs as it is one of the methods to remove spammy b other domain name and download it with a click." />
+    <meta name="twitter:site" content="@suraj1kc" />
+    <meta name="twitter:creator" content="@suraj1kc" />
+    <meta name="twitter:image"
+        content="https://surajkatwal.com.np/image/disavow-file-generator-url-to-root-domain-extractor" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../image/favicon-16x16.png">
+    <link rel="manifest" href="../image/site.webmanifest">
+    <link rel="canonical" href="https://surajkatwal.com.np/disavow-file-generator/index.html" />
+
+</head>
+
+<body>
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://surajkatwal.com.np">
+                    <p class="is-size-4 has-text-weight-semibold">Suraj Katwal</p>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div id="app">
+        <section class="section">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-half">
+                        <div class="box">
+                            <form>
+                                <div class="field ">
+                                    <label class="label is-size-5 ">Domain Name</label>
+                                    <div class="control">
+                                        <textarea class="textarea is-medium " placeholder="Ex: www.abc.com.np "
+                                            v-model="address " required="required" id="regex_input"></textarea>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <div class="box">
+
+                            <div class="field">
+                                <label class="label is-size-5">Output</label>
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Result" readonly ref="text"
+                                        id="disavowTool">{{domainlist}}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control buttons is-centered ">
+                                    <button class="button is-primary is-medium " @click="copyTextArea"
+                                        v-bind:disabled="isDisableComputed">Copy</button>
+                                    <button class="button is-danger is-medium " v-bind:disabled="isDisableComputed"
+                                        @click="saveToFile">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <section class="ml-2 mr-2">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <div class="box content ">
+                        <h1 class="has-text-centered">Disavow File Generator - URL to Root Domain Extractor</h1>
+                        <p class="is-size-5">
+                            Disavow File Generator is a simple online tool to extract Root domains from URLs as it is
+                            one of the methods to remove spammy b other domain name and download it with a click.
+                        </p>
+                        <div class="has-text-centered">
+                            <figure class="image is-inline-block"><img
+                                    src="../image/disavow-file-generator-url-to-root-domain-extractor.jpg" height="450"
+                                    width="720" alt="NP Domain Registration Cover Letter Generator"></figure>
+                        </div>
+                    </div>
+                    <div class="box content">
+                        <h2>How to use Disavow Tool Generator?</h2>
+                        <p class="is-size-5">
+                        <ul class="is-size-5">
+                            <li>First, insert the URLs in the textarea which you want to disavow.
+                            </li>
+                            <li>On the right side, you will see the list of the domain</li>
+                            <li>Now, you can either copy the list or Download on one click.</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="box content">
+                        <h2>Where to upload disavow file?</h2>
+                        <p class="is-size-5">
+                            You can upload your disavow text file to the Google Disavow tool available in Google Search
+                            Console.
+                        <ul class="is-size-5">
+                            <li>Go to <a href="https://search.google.com/search-console/disavow-links"
+                                    target="_blank">Google Disavow tool</a></li>
+                            <li>Select the domain property where you want to upload a list of disavowed links.</li>
+                            <li>Upload the downloaded Disavow list.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
