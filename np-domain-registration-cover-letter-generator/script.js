@@ -5,7 +5,6 @@ var app = new Vue({
         email: '',
         address: '',
         isShowing: false,
-
     },
     methods: {
         currentDate() {
@@ -20,28 +19,31 @@ var app = new Vue({
             if (this.name && this.email && this.address !== "") {
                 this.isShowing = true;
             }
-
         },
         async printThis() {
             console.log("printing..");
             const el = this.$refs.printcontent;
 
-            const options = {
-                type: "dataURL"
-            };
-            const printCanvas = await html2canvas(el, options);
+            // Temporarily set the background color to white
+            const originalBackgroundColor = el.style.backgroundColor;
+            el.style.backgroundColor = '#ffffff';
 
+            // Capture the element as a canvas
+            const printCanvas = await html2canvas(el, { backgroundColor: null });
+
+            // Convert the canvas to a JPEG data URL
+            const jpegDataUrl = printCanvas.toDataURL("image/jpeg", 1.0); // 1.0 is for quality (0 to 1)
+
+            // Reset the background color to its original state
+            el.style.backgroundColor = originalBackgroundColor;
+
+            // Create a link element
             const link = document.createElement("a");
-            link.setAttribute("download", "cover-letter.jpg");
-            link.setAttribute(
-                "href",
-                printCanvas
-                .toDataURL("image/jpg")
-                .replace("image/jpg", "image/octet-stream")
-            );
-            link.click();
+            link.setAttribute("download", "cover-letter.jpg"); // Set the download attribute with a .jpg file extension
+            link.setAttribute("href", jpegDataUrl);
+            link.click(); // Trigger the download
 
             console.log("done");
         },
     }
-})
+});
